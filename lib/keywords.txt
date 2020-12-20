@@ -1,0 +1,111 @@
+################################################################################
+#																			   #
+#	Arduino Multifuctional Expansion Board Interface						   #
+#	Keywords definitions													   #
+#																			   #
+#	Ver 0.1.0   															   #
+#																			   #
+################################################################################
+
+# Properties & data types (KEYWORD1)
+# Methods (KEYWORD2)
+# Structures (KEYWORD3)
+# Constants (LITERAL1)
+
+
+
+################################################################################
+#	Amebi										   							   #
+################################################################################
+
+# Properties & data types (KEYWORD1)
+Amebi								KEYWORD1
+
+# Methods (KEYWORD2)
+Boot								KEYWORD2
+Reset								KEYWORD2
+Update								KEYWORD2
+
+# Structures (KEYWORD3)
+
+# Constants (LITERAL1)
+
+
+
+################################################################################
+#	AmebiInput  								   							   #
+################################################################################
+
+# Properties & data types (KEYWORD1)
+
+# Methods (KEYWORD2)
+ReadInputs							KEYWORD2
+
+# Structures (KEYWORD3)
+button								KEYWORD3
+
+# Constants (LITERAL1)
+BUTTON_1							LITERAL1
+BUTTON_2							LITERAL1
+BUTTON_3							LITERAL1
+
+
+
+################################################################################
+#	AmebiLed  								   							       #
+################################################################################
+
+# Properties & data types (KEYWORD1)
+
+# Methods (KEYWORD2)
+SetLed								KEYWORD2
+BitmaskLed							KEYWORD2
+GetLed								KEYWORD2
+
+# Structures (KEYWORD3)
+
+# Constants (LITERAL1)
+LED_D1								LITERAL1
+LED_D2								LITERAL1
+LED_D3								LITERAL1
+LED_D4								LITERAL1
+LED_ALL								LITERAL1
+
+
+
+################################################################################
+#	AmebiDisplay							   							       #
+################################################################################
+
+# Properties & data types (KEYWORD1)
+
+# Methods (KEYWORD2)
+CleanDisplay						KEYWORD2
+SetDigit							KEYWORD2
+SetSegments							KEYWORD2
+PrintDecimalNumber					KEYWORD2
+PrintHexadecimalNumber				KEYWORD2
+PrintFloatNumber					KEYWORD2
+
+# Structures (KEYWORD3)
+
+# Constants (LITERAL1)
+CHAR_0								LITERAL1
+CHAR_1								LITERAL1
+CHAR_2								LITERAL1
+CHAR_3								LITERAL1
+CHAR_4								LITERAL1
+CHAR_5								LITERAL1
+CHAR_6								LITERAL1
+CHAR_7								LITERAL1
+CHAR_8								LITERAL1
+CHAR_9								LITERAL1
+CHAR_A								LITERAL1
+CHAR_B								LITERAL1
+CHAR_C								LITERAL1
+CHAR_D								LITERAL1
+CHAR_E								LITERAL1
+CHAR_F								LITERAL1
+CHAR_MINUS							LITERAL1
+CHAR_DOT							LITERAL1
+CHAR_BLANK							LITERAL1
