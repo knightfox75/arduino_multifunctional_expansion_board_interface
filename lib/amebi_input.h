@@ -1,7 +1,7 @@
 /*******************************************************************************
 
 	Arduino Multifunctional Expansion Board Interface
-	Ver 0.1.0
+	Ver 0.2.0
 	
 	Proyecto iniciado el 16-12-2020
 	
@@ -53,6 +53,9 @@ class AmebiInput {
 		const uint8_t BUTTON_1 = 0;
 		const uint8_t BUTTON_2 = 1;
 		const uint8_t BUTTON_3 = 2;
+
+		// Valor de la entrada analogica
+		int16_t analogic_input;
 
 		// Efectua la lectura de las entradas
 		void ReadInputs();

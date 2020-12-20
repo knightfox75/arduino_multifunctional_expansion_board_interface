@@ -1,0 +1,32 @@
+/*******************************************************************************
+
+	Arduino Multifunctional Expansion Board Interface
+	
+	Proyecto iniciado el 16-12-2020
+	
+	(cc) 2020 por Cesar Rincon
+	
+	nightfoxandco.com
+	contact@nightfoxandco.com
+
+	Arduino Multifunctional Expansion Board Interface
+    se distribuye bajo la licencia CREATIVE COMMONS
+	"Attribution-NonCommercial 4.0 International"
+	https://creativecommons.org/licenses/by-nc/4.0/
+	
+*******************************************************************************/
+
+
+2020-12-20 Ver.0.2.0
+--------------------------------------------------------------------------------
+- BUGFIX - Clase [AmebiDisplay]
+  Corregido el bug en los métodos PrintDecimalNumber() y PrintFloatNumber()
+  que causaba que los 0 entre dígitos no se imprimieran correctamente.
+- NOVEDAD - Clase [AmebiInput]
+  Añadida la lectura del puerto analogico. El valor se guarda en la propiedad
+  "analogic_input" de la clase.
+
+
+2020-12-20 Ver.0.1.0
+--------------------------------------------------------------------------------
+Versión inicial.

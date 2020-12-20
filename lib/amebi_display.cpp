@@ -1,7 +1,7 @@
 /*******************************************************************************
 
 	Arduino Multifunctional Expansion Board Interface
-	Ver 0.1.0
+	Ver 0.2.0
 	
 	Proyecto iniciado el 16-12-2020
 	
@@ -121,7 +121,7 @@ void AmebiDisplay::PrintDecimalNumber(int16_t number, bool fill) {
 					digit[i] = CHAR_MINUS;
 					negative = false;
 				} else {
-					if (i > 0) digit[i] = CHAR_BLANK;
+					if ((i > 0) && ((pow(10, i)) > number)) digit[i] = CHAR_BLANK;
 				} 
 			} else if ((i == 3) && negative) {
 				digit[i] = CHAR_MINUS;
@@ -176,7 +176,7 @@ void AmebiDisplay::PrintFloatNumber(float number, bool fill) {
 					digit[i] = CHAR_MINUS;
 					negative = false;
 				} else {
-					if (i > 1) digit[i] = CHAR_BLANK;
+					if ((i > 1) && ((pow(10, i)) > number)) digit[i] = CHAR_BLANK;
 				} 
 			} else if ((i == 3) && negative) {
 				digit[i] = CHAR_MINUS;

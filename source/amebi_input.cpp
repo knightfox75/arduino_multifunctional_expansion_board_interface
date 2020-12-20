@@ -1,7 +1,7 @@
 /*******************************************************************************
 
 	Arduino Multifunctional Expansion Board Interface
-	Ver 0.1.0
+	Ver 0.2.0
 	
 	Proyecto iniciado el 16-12-2020
 	
@@ -62,6 +62,9 @@ void AmebiInput::ReadInputs() {
 
 	// Lee los pulsadores
 	ReadButtons();
+
+	// Lee la entrada analogica
+	analogic_input = analogRead(0);
 
 }
 
