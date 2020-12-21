@@ -1,7 +1,7 @@
 /*******************************************************************************
 
 	Arduino Multifunctional Expansion Board Interface
-	Ver 0.2.0
+	Ver 0.3.0
 	
 	Proyecto iniciado el 16-12-2020
 	
@@ -51,6 +51,7 @@ void Amebi::Boot() {
 	AmebiInput::Boot();
 	AmebiLed::Boot();
 	AmebiDisplay::Boot();
+	AmebiSound::Boot();
 
 	// Valores iniciales
 	Reset();
@@ -66,6 +67,8 @@ void Amebi::Reset() {
 	AmebiLed::SetLed(LED_ALL, false);
 	// Borra el display
 	AmebiDisplay::CleanDisplay();
+	// Deten el Buzzer
+	AmebiSound::SetBuzzer(false);
 
 }
 
@@ -76,5 +79,8 @@ void Amebi::Update() {
 
 	// Contenido del display
 	AmebiDisplay::Update();
+
+	// Sonido
+	AmebiSound::Update();
 
 }

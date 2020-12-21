@@ -1,7 +1,7 @@
 /*******************************************************************************
 
 	Arduino Multifunctional Expansion Board Interface
-	Ver 0.2.0
+	Ver 0.3.0
 	
 	Proyecto iniciado el 16-12-2020
 	
@@ -33,12 +33,13 @@
 #include "amebi_input.h"
 #include "amebi_led.h"
 #include "amebi_display.h"
+#include "amebi_sound.h"
 
 
 
 
 /*** Definicion de la clase ***/
-class Amebi: public AmebiInput, public AmebiLed, public AmebiDisplay {
+class Amebi: public AmebiInput, public AmebiLed, public AmebiDisplay, public AmebiSound {
 	
 	public:
 	

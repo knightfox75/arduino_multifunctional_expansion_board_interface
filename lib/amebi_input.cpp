@@ -1,7 +1,7 @@
 /*******************************************************************************
 
 	Arduino Multifunctional Expansion Board Interface
-	Ver 0.2.0
+	Ver 0.3.0
 	
 	Proyecto iniciado el 16-12-2020
 	

@@ -15,14 +15,14 @@
 	"Attribution-NonCommercial 4.0 International"
 	https://creativecommons.org/licenses/by-nc/4.0/
 	
-	LEDS
+	SONIDO
 
 *******************************************************************************/
 
 
 
-#ifndef __AMEBI_LED_H
-#define __AMEBI_LED_H
+#ifndef __AMEBI_SOUND_H
+#define __AMEBI_SOUND_H
 
 
 
@@ -34,31 +34,27 @@
 
 
 /*** Definicion de la clase ***/
-class AmebiLed {
+class AmebiSound {
 	
 	public:
 	
 		// Constructor
-		AmebiLed();
+		AmebiSound();
 		
 		// Destructor
-		~AmebiLed();
+		~AmebiSound();
 
-		// Cambia el estado de un led
-		void SetLed(uint8_t led_id, bool status);
+		// Cambia el estado del Buzzer
+		void SetBuzzer(bool enable);
 
-		// Ilumina los leds segun el bitmask dado
-		void BitmaskLed(uint8_t bitmask);
+		// Devuelve el estado del Buzzer
+		bool GetBuzzer();
 
-		// Devuelve el estado de un led
-		bool GetLed(uint8_t led_id);
+		// Emite un tono
+		void PlayTone(int32_t duration);
 
-		// ID's de los LEDS
-		const int8_t LED_D1 = 0;
-		const int8_t LED_D2 = 1;
-		const int8_t LED_D3 = 2;
-		const int8_t LED_D4 = 3;
-		const int8_t LED_ALL = 4;
+		// Emite un pitido corto (BEEP)
+		void Beep();
 
 
 
@@ -74,12 +70,15 @@ class AmebiLed {
 	
 	private:
 
-		// Definicion de los PINS de los LEDS
-		const uint8_t PIN_LED[4] = {13, 12, 11, 10};
-		
-		// Estado de los LEDS
-		bool led_status[4];
+		// Configuracion
+		const int32_t beep_duration = 100;		// Duracion del tono "BEEP"
 
+		// Definicion del PIN del BUZZER
+		const uint8_t PIN_BUZZER = 3;
+
+		// Control del estado del Buzzer
+		bool status;		// Estado
+		int32_t timer;		// Control del tiempo de actividad
 		
 };
 

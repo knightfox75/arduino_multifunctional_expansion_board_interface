@@ -2,7 +2,7 @@
 
 	Arduino Multifunctional Expansion Board Interface Example
 	Counter in Decimal, Hexadecimal & Binary formats
-	Ver 1.0.0
+	Ver 1.1.0
 
 	(cc) 2020 por Cesar Rincon
 	
@@ -80,33 +80,40 @@ void loop() {
 /*** Program Logic ***/
 void Logic() {
 
-	// If timer is not researched the limit, exit
+	// Control del runtime
 	if (millis() < runtime_timer) return;
-
-	// New timestamp
 	runtime_timer = millis() + runtime_latency;
 
-	// Read the inputs from the shield
+	// Lee las entradas
 	amebi.ReadInputs();
 
-	// UP / DOWN
+	// Accion UP / DOWN
 	bool up = false, down = false;
 
-	// AUTO mode? (BUTTON A1)
-	if (amebi.button[0].down) _auto = !_auto;
+	// Modo auto si/no (BOTON A1)
+	if (amebi.button[0].down) {
+		_auto = !_auto;
+		amebi.Beep();
+	}
 
-	// AUTO mode enabled
+	// Si estas en modo automatico
 	if (_auto) {
 		if (millis() > timer) {
 			up = true;
 			timer = millis() + timer_delay;
 		}
-	} else {	// Manual mode
-		up = amebi.button[2].down;		// (BUTTON A3)
-		down = amebi.button[1].down;	// (BUTTON A2)
+	} else {	// Modo manual
+		if (amebi.button[2].down) {		// (BOTON A2)
+			up = true;
+			amebi.Beep();
+		}
+		if (amebi.button[1].down) {		// (BOTON A3)
+			down = true;
+			amebi.Beep();
+		}
 	}
 
-	// Update the counter
+	// Actualiza los marcadores
 	if (up) {
 		counter ++;
 		if (counter > 0x0F) counter = 0x00;
@@ -116,11 +123,11 @@ void Logic() {
 		if (counter < 0x00) counter = 0x0F;
 	}
 
-	// Decimal counter print
+	// Contador decimal
 	amebi.PrintDecimalNumber(counter);
-	// Hexadecimal counter print
+	// Contador hexadecimal
 	amebi.SetDigit(3, counter);
-	// Binary counter print
+	// Contador binario
 	amebi.BitmaskLed(counter);	
 
 }

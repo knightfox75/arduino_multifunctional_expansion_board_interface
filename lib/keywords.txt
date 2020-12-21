@@ -3,7 +3,7 @@
 #	Arduino Multifuctional Expansion Board Interface						   #
 #	Keywords definitions													   #
 #																			   #
-#	Ver 0.2.0   															   #
+#	Ver 0.3.0   															   #
 #																			   #
 ################################################################################
 
@@ -110,3 +110,21 @@ CHAR_F								LITERAL1
 CHAR_MINUS							LITERAL1
 CHAR_DOT							LITERAL1
 CHAR_BLANK							LITERAL1
+
+
+
+################################################################################
+#	AmebiSound 								   							       #
+################################################################################
+
+# Properties & data types (KEYWORD1)
+
+# Methods (KEYWORD2)
+SetBuzzer                           KEYWORD2
+GetBuzzer                           KEYWORD2
+PlayTone                            KEYWORD2
+Beep                                KEYWORD2
+
+# Structures (KEYWORD3)
+
+# Constants (LITERAL1)
